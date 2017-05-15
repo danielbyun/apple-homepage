@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    min-height: 100%;
 }
 
 html,
@@ -15,6 +16,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+    min-width: 320px;
 }
 
 a {
@@ -22,7 +24,7 @@ a {
     font-weight: 100;
     letter-spacing: 1.3px;
     text-decoration: none;
-    padding: 13px 1.6em;
+    padding: 10px 1.6em;
     display: inline-block;
     width: 100%;
     text-align: center;
@@ -32,6 +34,8 @@ a {
 a:hover {
     color: grey;
 }
+
+/* nav bar */
 
 .toggleNav {
     display: none;
@@ -47,7 +51,7 @@ a:hover {
 }
 
 .flex-nav ul {
-    max-width: 1000px;
+    max-width: 1048px;
     list-style: none;
     margin: 0 auto;
     padding: 0;
@@ -75,8 +79,10 @@ a:hover {
     font-size: 12px;
 }
 
+/* hero section */
+
 .hero {
-    height: calc(100vh - 113px);
+    height: calc(100vh - 130px);
     background: #222;
     background: url(https://images.apple.com/v/home/df/images/heroes/iphone_alt_large.jpg) no-repeat center center;
     background-size: cover;
@@ -107,6 +113,8 @@ a:hover {
     letter-spacing: .011em;
 }
 
+/* tiles below the hero section */
+
 .tiles-nav ul {
     display: flex;
     flex-direction: row;
@@ -116,38 +124,29 @@ a:hover {
     padding: 0;
 }
 
-.tiles-nav li {
+.tiles-nav a {
+    color: black;
     list-style: none;
     display: inline-block;
     height: 200px;
-    width: 360px;
+    width: 100%;
     flex: 1;
     border: 0.15em solid white;
 }
 
-.tiles-nav a {
-    color: black;
-    padding: 13px 1.6em;
-    width: 100%;
+.tiles-nav a:nth-child(1) {
+    background: url(https://images.apple.com/v/home/df/images/promos/how_to_shoot_on_iphone_large.jpg) no-repeat center;
 }
 
-.tiles-nav li:nth-child(1) {
-    background-size: 360px 200px;
-    background-repeat: no-repeat;
-    background-image: url(https://images.apple.com/v/home/df/images/promos/how_to_shoot_on_iphone_large.jpg);
-    height: 200px;
-    background-position: center;
-}
-
-.tiles-nav li:nth-child(2){
+.tiles-nav a:nth-child(2){
     background: url(https://images.apple.com/v/home/df/images/promos/mothersday_large.jpg) no-repeat center;
 }
 
-.tiles-nav li:nth-child(3){
+.tiles-nav a:nth-child(3){
     background: url(https://images.apple.com/v/home/df/images/promos/watch_large.jpg) no-repeat center;
 }
 
-.tiles-nav li:nth-child(4){
+.tiles-nav a:nth-child(4){
     background: url(https://images.apple.com/v/home/df/images/promos/macbook_pro_large.jpg) no-repeat center;
 }
 
@@ -157,77 +156,186 @@ a:hover {
     border-right: none;
 }
 
+/* footer section */
+
 footer {
-    background-color: #efefef;
-    font-size: 11px;
+    background-image: linear-gradient(250deg, #F2F2F2, white);
 }
 
-footer nav {
+.footerSection {
+    font-size: 11px;
+    padding-top: 20px;
+    display: flex;
+    max-width: 1048px;
+    margin: 0 auto;
+}
+
+.footerSection nav {
     width: calc(100vw / 5);
     list-style: none;
-    display: inline-block;
-    height: 200px;
     flex: 1;
-    border: 0.15em solid white;
+    /*border: 0.15em solid red;*/
 }
 
-footer ul {
+.footerSection ul {
     list-style: none;
     margin: 0;
-    padding-top: 20px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
 }
 
-footer a {
-    color: grey;
+.footerSection nav:nth-child(1){
+    margin-left: 5em;
+}
+
+.footerSection a {
+    color: #434343;
     letter-spacing: 0.03em;
+    font-size: 1em;
+    padding: 3px 0 3px 0;
+    text-align: left;
+    display: inline;
+}
+
+.footerSection h3 {
     font-size: 11px;
-    padding: 5px 0 5px 0;
-}
-
-footer h3 {
     margin: 0 3px 6px 0;
+    font-weight: bold;
 }
 
-footer a:hover {
+.footerSection a:hover {
     color: #333;
     text-decoration: underline;
 }
 
+.footerSection li {
+    margin-bottom: 6px;
+}
 
+.footerSection .space {
+    margin-bottom: 15px;
+}
+
+/* footer info section */
+.footerInfo {
+    font-size: 11px;
+    max-width: 1048px;
+    margin: 0 auto;
+    color: #A0A0A0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 3em 0 3em 0;
+    /*border: 1px solid red;*/
+}
+
+.footerInfo p {
+    margin-left: 5em;
+}
+
+.footerInfo .visit {
+    display: block;
+    /*border: 1px solid black;*/
+}
+
+.footerInfo .copyright {
+    display: inline;
+    /*border: 1px solid orange;*/
+}
+
+.footerInfo a {
+    font-size: 12px;
+    color: #4796D5;
+    padding: 0;
+    margin: 0;
+    text-align: start;
+    display: inline;
+    letter-spacing: 0;
+}
+
+.footerInfo a:hover {
+    text-decoration: underline;
+}
+
+.footerInfo nav {
+    flex-wrap: wrap;
+}
+
+.footerInfo ul {
+    list-style: none;
+    display: inline-flex;
+    flex: 1 1 50%;
+    align-items: center;
+    /*border: 1px solid yellow;*/
+}
+
+.footerInfo li {
+    border-left: 1px solid #A0A0A0;
+}
+
+.footerInfo li:nth-child(1),
+.footerInfo li:nth-child(6) {
+    border-left: none;
+}
+
+.footerInfo li:nth-child(11) {
+    justify-content: flex-end;
+}
+
+.footerInfo li a {
+    font-size: 11px;
+    color: black;
+    margin: 0 1.5em;
+}
+
+.footerInfo li a:hover {
+    text-decoration: underline;
+}
+
+.footerInfo img {
+    width: 2em;
+    height: auto;
+}
 
 /* 755px first mobile breakpoint */
+@media screen and (max-width: 1068px){
+    .tiles-nav a {
+        flex: 1 0 50%;
+        width: 100%;
+        height: 200px;
+    }
+}
 @media screen and (max-width: 768px){
     .heroText h2 {
         font-size: 40px;
     }
-    .flex-nav {
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    .flex-nav ul {
+        display: flex;
+    }
+    .flex-nav ul.open {
         display: flex;
     }
     .flex-nav .toggleNav {
+        /*border: 1px solid orange;*/
         display: block;
-        justify-content: flex-start;
         text-align: left;
-        flex-shrink: 1;
-        flex-basis: 0%;
-    }
-    .flex-nav li:nth-child(1) a {
-        text-align: left;
+        width: inherit;
     }
     .flex-nav .logo {
+        /*border: 1px solid red;*/
         display: block;
-        flex: 2;
-        justify-content: center;
         text-align: center;
     }
     .flex-nav li:nth-child(10) {
-        display: block;
-        flex: 1;
+        border: 1px solid yellow;
         justify-content: flex-end;
-        text-align: right;
     }
     .flex-nav li:nth-child(1) {
         font-size: 15px;
@@ -247,5 +355,46 @@ footer a:hover {
 @media screen and (max-width: 500px){
     .heroText h2 {
         font-size: 31px;
+    }
+    .tiles-nav {
+        display: flex;
+        flex-direction: column;
+    }
+    .tiles-nav a {
+        padding: 0;
+    }
+    .tiles-nav a:nth-child(2),
+    .tiles-nav a:nth-child(3) {
+        padding: 0;
+    }
+    .tiles-nav a {
+        flex: 1 1 100%;
+        border: 2px solid white;
+        background-size: cover !important;
+    }
+    .tiles-nav li:nth-child(1),
+    .tiles-nav li:nth-child(2),
+    .tiles-nav li:nth-child(3) {
+        border-bottom: none;
+    }
+    .footerSection {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footerSection ul {
+        border-bottom: 1px solid grey;
+    }
+    .footerSection h3 {
+        padding: 0 1em;
+        width: 10em;
+        font-size: 13px;
+        flex-wrap: wrap;
+    }
+    .footerSection li {
+        display: none;
+    }
+    .footerSection nav:nth-child(1){
+        margin: 0;
     }
 }

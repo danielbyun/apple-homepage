@@ -3,6 +3,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
+var cleanCSS = require('gulp-clean-css');
 
 gulp.task("sass", function(){
     return gulp.src('app/scss/styles.scss')
@@ -19,3 +20,9 @@ gulp.task('styles', function(){
 gulp.task('scripts', function(){
     gulp.src('app/')
 })
+
+gulp.task('minify-css', function(){
+    return gulp.src('app/css/styles.css')
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(gulp.dest('dist'))
+});
