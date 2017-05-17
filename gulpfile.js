@@ -11,18 +11,18 @@ gulp.task("sass", function(){
         .pipe(gulp.dest('app/css'))
 });
 
-gulp.task('styles', function(){
-    gulp.src('css/styles.css')
+gulp.task('flex', function(){
+    gulp.src('app/css/styles.css')
         .pipe(autoprefixer())
         .pipe(gulp.dest('dist'));
 });
 
 gulp.task('scripts', function(){
     gulp.src('app/')
-})
+});
 
 gulp.task('minify-css', function(){
-    return gulp.src('app/css/styles.css')
+    return gulp.src('dist/styles.css')
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('dist'))
 });
