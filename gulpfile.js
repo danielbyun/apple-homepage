@@ -6,13 +6,13 @@ var uglify = require('gulp-uglify');
 var cleanCSS = require('gulp-clean-css');
 
 gulp.task("sass", function(){
-    return gulp.src('app/scss/styles.scss')
+    return gulp.src('app/scss/apple.scss')
         .pipe(sass())
         .pipe(gulp.dest('app/css'))
 });
 
 gulp.task('flex', function(){
-    gulp.src('app/css/styles.css')
+    gulp.src('app/css/apple.css')
         .pipe(autoprefixer())
         .pipe(gulp.dest('dist'));
 });
@@ -22,7 +22,7 @@ gulp.task('scripts', function(){
 });
 
 gulp.task('minify-css', function(){
-    return gulp.src('dist/styles.css')
+    return gulp.src('dist/apple.css')
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('dist'))
 });

@@ -1,12 +1,16 @@
+<?php
+    define ("TITLE", "Daniel's Apple Home Page");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dan's Apple Homepage</title>
+    <title><?php echo TITLE; ?></title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/apple.css">
 </head>
 <body>
     <div class="wrapper">
@@ -139,7 +143,7 @@
                 <p class="visit">More ways to shop: Visit an <a href="#">Apple Store</a>, call 1-800-MY-APPLE, or <a href="#">find a reseller.</a></p>
                 <hr>
                 <nav>
-                    <p class="copyright">Copyright &copy; 2017 Apple Inc. All rights reserved.</p>
+                    <p class="copyright">Copyright &copy; <?php echo date("Y"); ?> Apple Inc. All rights reserved.</p>
                     <ul>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Use</a></li>
