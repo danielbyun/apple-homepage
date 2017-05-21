@@ -52,6 +52,10 @@ a:hover {
     /*border: 1px solid red;*/
 }
 
+.flex-nav div {
+    display: none;
+}
+
 .flex-nav ul {
     max-width: 1048px;
     list-style: none;
@@ -326,6 +330,9 @@ footer {
         width: 100%;
         height: 200px;
     }
+    .flex-nav div {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -341,6 +348,9 @@ footer {
         display: flex;
         justify-content: space-between;
     }
+    .flex-nav div {
+        display: flex;
+    }
     .flex-nav ul {
         display: none;
     }
@@ -352,12 +362,15 @@ footer {
         flex-wrap: wrap;
         margin: 0;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .toggle li:nth-child(1) {
+        display: none;
     }
     .flex-nav ul a {
         flex: 1 1 100%;
         flex-direction: row;
-
     }
     .flex-nav li {
         flex: 1 1 100%;

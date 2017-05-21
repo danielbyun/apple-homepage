@@ -15,7 +15,11 @@
 <body>
     <div class="wrapper">
         <nav class="flex-nav">
-            <a href="#" class="toggleNav">☰</a>
+            <div>
+                <a href="#" class="toggleNav">☰</a>
+                <a href="#" target="_blank"><i class="fa fa-apple fa-lg" aria-hidden="true"></i></a>
+                <a href="http://github.com/danielbyun" target="a_blank"><i class="fa fa-github fa-lg"></i></a>
+            </div>
             <ul class="toggle">
                 <li class="logo">
                     <a href="#" target="_blank"><i class="fa fa-apple fa-lg" aria-hidden="true"></i></a>
